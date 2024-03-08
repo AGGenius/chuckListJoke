@@ -1,3 +1,4 @@
+/* Coded by Gonzalo Nuñez & Adrián Giner*/
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -11,7 +12,30 @@ body {
 
 h1 {
   color: #333;
+  border: 2px solid goldenrod;
+  background-color: wheat;
+  padding: .5em;
+  border-radius: 10px;
 }
+
+
+h1 {
+  animation: animaciónh1 4s infinite;
+}
+
+@keyframes animaciónh1 {
+  0% {
+    transform: scale(0.7) ;
+  }
+  50% {
+    transform: scale(1) ;
+  }
+  100% {
+    transform: scale(0.7) ;
+  }
+}
+
+
 
 button {
   margin-top: 10px;
@@ -21,10 +45,82 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+ul {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  list-style: none;
+}
+
+li {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: white;
+  box-shadow: 10px 5px 10px gray;
+
+  margin-top: 1em;
+  padding: .4em 1em 1em 1em;
+  border-radius: 10px;
+}
+
+
+li {
+  animation: animacionli 4s infinite;
+}
+
+@keyframes animacionli {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
+.delButton {
+  width: 150px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  margin-bottom: .4em;
+}
+
+.delButton:hover {
+  border: 2px solid palevioletred;
+  background-color: lightcoral;
+}
+
+#removeAll {
+  width: 250px;
+  height: 40px;
 }
 
 
